@@ -12,6 +12,7 @@ body{
     background-color: hsl(360, 35%, 0%);
     color: whitesmoke;
     font-family: 'Bad Script', cursive;
+    width: 100%;
 }
 
 header{
@@ -28,6 +29,7 @@ header{
     align-items: center;
     background-color: hsl(75, 100%, 25%);
     padding-bottom: 0.5rem;
+    width: 100%;
 }
 
 header h1{
@@ -53,6 +55,8 @@ header nav{
     height: 100%;
     padding: 0.65rem;
     background-color: hsl(75, 100%, 35%);
+    justify-content: center;
+    align-items: center;
 }
 
 header nav button{
@@ -79,14 +83,18 @@ header nav button{
     justify-content: space-evenly;
     align-items: center;
     min-height: 35vh;
+    margin: 0 auto;
+    max-width: 670px;
 }
 
 .square{
     width: 30%;
-    height: 8rem;
+    padding-bottom: 35%;
     border: solid 1px #ccc;
 }
 
 body h3{
     margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
