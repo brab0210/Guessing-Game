@@ -63,6 +63,7 @@ function rtaCorrecta(){
     let squares = document.querySelectorAll('.square');
     squares.forEach(square => {
         square.style.backgroundColor = rgbGuess.textContent;
+        square.style.border = "solid 1px #ccc";
     });
     resetBtn.innerText = "Play Again"    ;
     wrapperHeader.style.backgroundColor = rgbGuess.textContent;
