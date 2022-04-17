@@ -32,7 +32,7 @@ function squareQty(total){
 function reset(){
     resetBtn.innerText = "New Colors";
     h3mess.innerText = "";
-    wrapperHeader.style.backgroundColor = "hsl(75, 100%, 35%)"
+    wrapperHeader.style.backgroundColor = "hsl(75, 100%, 25%)"
     easyBtn.classList.contains('selected') ? squareQty(3) : null;
     hardBtn.classList.contains('selected') ? squareQty(6) : null;
     clickSquare()
