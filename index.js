@@ -58,6 +58,9 @@ hardBtn.addEventListener('click', (e) => {
     reset();
 })
 
+let count = 0;
+let h3aciertos = document.querySelector('.aciertos');
+let spanCount = document.querySelector('.count');
 
 function rtaCorrecta(){
     let squares = document.querySelectorAll('.square');
@@ -65,8 +68,17 @@ function rtaCorrecta(){
         square.style.backgroundColor = rgbGuess.textContent;
         square.style.border = "solid 1px #ccc";
     });
-    resetBtn.innerText = "Play Again"    ;
+    resetBtn.innerText = "Play Again";
     wrapperHeader.style.backgroundColor = rgbGuess.textContent;
+    count++
+    sessionStorage.setItem('guest', JSON.stringify(count))
+    if(count == 1){
+        h3aciertos.textContent = "Aciertos: ";
+        h3aciertos.append(spanCount)
+        spanCount.innerHTML = count;
+    }else{
+        spanCount.innerHTML = sessionStorage.getItem('guest');
+    } 
 }
 
 function clickSquare(){
@@ -77,8 +89,10 @@ rgbGuess.innerHTML = squares[randomIndex].style.backgroundColor;
     squares.forEach((square) => {
         square.addEventListener('click', (e) => {
             if(e.target.style.backgroundColor == rgbGuess.textContent){
+                if(resetBtn.textContent != "Play Again"){
                 h3mess.innerHTML = "Acertaste, excelente!"
                 rtaCorrecta();
+                }
             }else{
                 h3mess.innerHTML = "Prueba de vuelta!"
                 e.target.style.backgroundColor = bodyColor;
@@ -87,6 +101,10 @@ rgbGuess.innerHTML = squares[randomIndex].style.backgroundColor;
             
         })
     })
-
 }
+
+
+
+
+
 

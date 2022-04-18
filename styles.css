@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: none;
     border: none;
+    outline: none;
 }
 
 body{
@@ -93,8 +93,25 @@ header nav button{
     border: solid 1px #ccc;
 }
 
-body h3{
-    margin: 1rem;
+body h3 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.count{
+    position: absolute;
+    right: -25px;
+    font-size: 1.2em;
+    bottom: -2px;
+}
+.aciertos{
+    padding-left: 20px;
+}
+.message{
+    margin: 1rem 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 16px;
+    min-width: 50%;
 }
